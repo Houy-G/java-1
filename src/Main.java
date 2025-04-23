@@ -1,14 +1,18 @@
 import java.util.Arrays;
 
 public class Main {
-    public static int  wordCount(String text){
-        int count = 0;
-        for (int i = 0 ; i < text.length(); i++){
+    
+    public static void wordCount() {
+        Scanner scanner = new Scanner(System.in);
 
-        }
-        count +=1;
-        return count;
-    }
+        System.out.println("Enter a sentence or multiple words:");
+        String input = scanner.nextLine();
+        if (input.trim().isEmpty()) {
+            System.out.println("You entered no words.");
+        } else {
+            String[] words = input.trim().split("\\s+");
+            System.out.println("Word count: " + words.length);
+        }}
     public static int[] sort(int[] user ){
         int[] sort = new  int[user.length];
         for (int i = 0 ; i < user.length; i++){
@@ -19,7 +23,7 @@ public class Main {
     }
     public static void main(String[] args) {
         System.out.println();
-        int count =  wordCount("Houyin ji ko ");
+        int count =  wordCount();
         System.out.println("word have : "+count);
         int[] user = {1,2,3,4,6};
         int[] sort = sort(user);
